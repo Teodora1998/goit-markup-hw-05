@@ -4,16 +4,26 @@
 <head>
   <title>Web Studio Homework Project</title>
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body>
 
+  <div class="modal is-hidden" data-modal>
+    <div class="inner-modal">
+      <button class="close-modal">
+        <svg width="11" height="11" data-modal-close>
+          <use href="/images/icons.svg#icon-x"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
   <div class="container border">
     <header class=" section page-header">
@@ -21,7 +31,7 @@
       </a>
       <nav>
         <ul class="unstyled-list">
-          <li class="main-nav-item"><a class="main-nav-link link" href="index.html">Studio</a></li>
+          <li class="main-nav-item"><a class="main-nav-link link selected-item" href="index.html">Studio</a></li>
           <li class="main-nav-item"><a class="main-nav-link link" href="portofolio.html">Portfolio</a></li>
           <li class="main-nav-item"><a class="main-nav-link link" href="contacts.html">Contacts</a></li>
         </ul>
@@ -46,7 +56,10 @@
     <div class="container">
       <section class="section hero-section">
         <h1 class="hero-title">EFFECTIVE SOLUTIONS FOR</br> YOUR BUSINESS</h1>
-        <button class="main-sec-button" type="button">Request our service</button>
+        <button class="main-sec-button" type="button" data-modal-open="1">Request our service</button>
+
+
+      </section>
       </section>
     </div>
     <div class="container">
@@ -412,7 +425,7 @@
       </section>
     </footer>
   </div>
-
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
