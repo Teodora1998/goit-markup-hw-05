@@ -645,9 +645,12 @@ selected-item {
 }
 
 .portofolio-card-border {
-  position: relative;
   display: block;
   margin: 0;
+}
+
+.img-card {
+  position: relative;
   overflow: hidden;
 }
 
@@ -657,13 +660,6 @@ selected-item {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cubic-bezier: (0.4, 0, 0.2, 1);
   transition: transform 250ms ease;
-}
-
-.port-card-img {
-  display: flex;
-  flex-direction: row;
-  width: 370px;
-  gap: 30px;
 }
 
 .overlay {
