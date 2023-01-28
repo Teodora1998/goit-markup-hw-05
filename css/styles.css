@@ -86,21 +86,18 @@ ul {
 
 .selected-item {
   position: relative;
-  color: currentColor;
   width: 100%;
 }
 
 .selected-item::after {
   content: " ";
   position: absolute;
-  display: block;
-  text-decoration: underline;
   background-color: var(--brand-color);
+  color: var(--brand-color);
   width: 100%;
   height: 4px;
   left: 0;
   bottom: -33px;
-  box-sizing: border-box;
   border-radius: 2px;
 }
 
