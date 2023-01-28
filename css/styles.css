@@ -80,32 +80,29 @@ ul {
 .main-nav-link:active,
 .main-nav-link:focus {
   color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
-.selected-item {
+selected-item {
+  position: relative;
+  color: currentColor;
+  width: 100%;
 }
 
 .selected-item::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.main-nav-link:selected-item:after {
   content: " ";
   position: absolute;
   display: block;
-  text-decoration-line: underline;
+  text-decoration: underline;
   background-color: var(--brand-color);
-  z-index: 0;
-  height: 4px;
-
-  left: 0;
-  top: 22px;
-
   width: 100%;
-  margin-top: 28px;
+  height: 4px;
+  left: 0;
+  bottom: -33px;
+
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
 .contact-list {
@@ -127,6 +124,8 @@ ul {
 .contact-nav-link:active,
 .contact-nav-link:focus {
   color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .header-icon {
@@ -135,6 +134,8 @@ ul {
 
 .header-icon:hover {
   color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 /* Hero section styling */
@@ -176,6 +177,8 @@ ul {
 .main-sec-button:active,
 .main-sec-button:focus {
   background-color: #188ce8;
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .close-modal {
@@ -378,6 +381,8 @@ ul {
 .social-link:hover {
   color: #ffffff;
   background-color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .position {
@@ -454,6 +459,8 @@ ul {
 .icon-card:hover {
   fill: var(--brand-color);
   border-color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 /* footer */
@@ -559,6 +566,8 @@ ul {
 .footer-social-link:hover {
   color: #ffffff;
   background-color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 /* PORTOFOLIO styling */
@@ -589,6 +598,8 @@ ul {
 .portofolio-button:focus {
   color: #ffffff;
   background-color: var(--brand-color);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .portofolio {
@@ -630,19 +641,22 @@ ul {
   gap: 30px;
   width: 370px;
   border: 1px solid #eeeeee;
-  overflow: hidden;
   background-color: #ffffff;
 }
 
 .portofolio-card-border {
+  position: relative;
   display: block;
   margin: 0;
+  overflow: hidden;
 }
 
 .portofolio-card-border:hover {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .port-card-img {
@@ -650,6 +664,30 @@ ul {
   flex-direction: row;
   width: 370px;
   gap: 30px;
+}
+
+.overlay {
+  background-color: var(--brand-color);
+  opacity: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.56;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 24px;
+  position: absolute;
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+}
+
+.portofolio-card-border:hover .overlay {
+  transform: translatey(0);
+  cubic-bezier: (0.4, 0, 0.2, 1);
+  transition: transform 250ms ease;
 }
 
 .visually-hidden {
