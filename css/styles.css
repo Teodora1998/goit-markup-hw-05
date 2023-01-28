@@ -4,6 +4,7 @@
   --background-color: #f5f4fa;
   --link-color: #afb1b8;
   --white-background: #ffffff;
+  --subtitle-color: #212121;
 }
 
 :body {
@@ -74,6 +75,7 @@ ul {
   font-weight: 500;
   letter-spacing: 0.02em;
   margin: 0 auto;
+  color: var(--subtitle-color);
 }
 
 .main-nav-link:hover,
@@ -87,13 +89,13 @@ ul {
 .selected-item {
   position: relative;
   width: 100%;
+  color: var(--brand-color);
 }
 
 .selected-item::after {
   content: " ";
   position: absolute;
   background-color: var(--brand-color);
-  color: var(--brand-color);
   width: 100%;
   height: 4px;
   left: 0;
@@ -236,6 +238,7 @@ ul {
 
 .page-sec-subtitle {
   display: block;
+  color: var(--subtitle-color);
   width: 270px;
   font-weight: 700;
   line-height: 1.17;
@@ -277,12 +280,14 @@ ul {
   margin: 0 auto;
 }
 
-.section-title {
+.about-section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   padding-bottom: 50px;
+  margin-top: 94px;
+  color: var(--subtitle-color);
 }
 
 .about-images {
@@ -326,9 +331,14 @@ ul {
 }
 
 .section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
   padding-bottom: 50px;
   padding-top: 94px;
   margin: 0 auto;
+  text-align: center;
+  color: var(--subtitle-color);
 }
 
 .team-list {
@@ -345,6 +355,7 @@ ul {
 }
 
 .employee-name {
+  color: var(--subtitle-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -419,6 +430,7 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-self: center;
+  color: var(--subtitle-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
