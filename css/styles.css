@@ -84,7 +84,7 @@ ul {
   transition: transform 250ms ease;
 }
 
-selected-item {
+.selected-item {
   position: relative;
   color: currentColor;
   width: 100%;
@@ -100,7 +100,6 @@ selected-item {
   height: 4px;
   left: 0;
   bottom: -33px;
-
   box-sizing: border-box;
   border-radius: 2px;
 }
